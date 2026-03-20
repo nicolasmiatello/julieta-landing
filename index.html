@@ -39,12 +39,11 @@
     overflow-x: hidden;
   }
 
-  /* Subtle grain texture */
+  /* Grain */
   body::after {
     content: '';
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    inset: 0;
     pointer-events: none;
     z-index: 9999;
     opacity: 0.018;
@@ -54,55 +53,48 @@
 
   /* ===== HERO ===== */
   .hero {
-    min-height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5rem 1.5rem 4rem;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(170deg, var(--sand-light) 0%, var(--sand) 55%, var(--sand-dark) 100%);
+    background: var(--sand);
   }
 
-  .blob {
+  .hero-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1.5rem 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-img-strip {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-img-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .hero-img-strip::after {
+    content: '';
     position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    animation: bfloat 22s ease-in-out infinite;
-  }
-  .blob--1 {
-    width: 520px; height: 520px;
-    top: -12%; right: -8%;
-    background: radial-gradient(circle, var(--rose-pale) 0%, transparent 70%);
-    opacity: 0.45;
-  }
-  .blob--2 {
-    width: 380px; height: 380px;
-    bottom: -8%; left: -6%;
-    background: radial-gradient(circle, var(--rose-light) 0%, transparent 70%);
-    opacity: 0.22;
-    animation-delay: -8s;
-  }
-  .blob--3 {
-    width: 260px; height: 260px;
-    top: 28%; left: 10%;
-    background: radial-gradient(circle, var(--rose-pale) 0%, transparent 70%);
-    opacity: 0.13;
-    animation-delay: -15s;
-  }
-
-  @keyframes bfloat {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(16px, -16px) scale(1.03); }
-    66% { transform: translate(-10px, 10px) scale(0.97); }
+    bottom: 0; left: 0;
+    width: 100%; height: 80px;
+    background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
   }
 
   .hero-content {
     max-width: 720px;
-    position: relative;
-    z-index: 2;
   }
 
   .eyebrow {
@@ -111,7 +103,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--rose);
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
     opacity: 0;
     animation: rise 0.8s ease-out 0.2s forwards;
   }
@@ -122,7 +114,7 @@
     font-weight: 400;
     line-height: 1.2;
     color: var(--text-primary);
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
     opacity: 0;
     animation: rise 0.9s ease-out 0.4s forwards;
   }
@@ -200,16 +192,8 @@
     margin-top: 1rem;
   }
 
-  .scroll-hint {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.18;
-  }
-
-  /* ===== SECTIONS BASE ===== */
-  section { padding: 5.5rem 1.5rem; }
+  /* ===== SECTIONS ===== */
+  section { padding: 5rem 1.5rem; }
 
   .inner { max-width: 660px; margin: 0 auto; }
 
@@ -231,12 +215,9 @@
     color: var(--text-primary);
   }
 
-  .stitle em {
-    font-style: italic;
-    color: var(--rose-dark);
-  }
+  .stitle em { font-style: italic; color: var(--rose-dark); }
 
-  /* Reveal on scroll */
+  /* Reveal */
   .rv {
     opacity: 0;
     transform: translateY(30px);
@@ -248,6 +229,22 @@
   .rv-d2 { transition-delay: 0.2s; }
   .rv-d3 { transition-delay: 0.3s; }
   .rv-d4 { transition-delay: 0.4s; }
+
+  /* ===== IMAGE STRIP (separator) ===== */
+  .img-strip {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .img-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
 
   /* ===== IDENTIFICATION ===== */
   .identification { background-color: var(--cream); }
@@ -374,9 +371,7 @@
     margin-bottom: 2rem;
   }
 
-  .paradigm .stitle em {
-    color: var(--rose-light);
-  }
+  .paradigm .stitle em { color: var(--rose-light); }
 
   .paradigm p {
     font-size: 1.08rem;
@@ -466,10 +461,7 @@
     padding: 4.5rem 1.5rem;
   }
 
-  .fertil-inner {
-    max-width: 540px;
-    margin: 0 auto;
-  }
+  .fertil-inner { max-width: 540px; margin: 0 auto; }
 
   .fertil-line {
     width: 40px; height: 1px;
@@ -495,26 +487,42 @@
 
   /* ===== FINAL CTA ===== */
   .final-cta {
-    background: linear-gradient(175deg, var(--sand) 0%, var(--sand-dark) 100%);
     text-align: center;
-    padding: 6rem 1.5rem;
+    padding: 0;
     position: relative;
     overflow: hidden;
+    background: var(--sand);
   }
 
-  .final-cta::before {
+  .final-cta-img {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .final-cta-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .final-cta-img::after {
     content: '';
     position: absolute;
-    top: -100px; left: 50%;
-    transform: translateX(-50%);
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, var(--rose-pale) 0%, transparent 60%);
-    opacity: 0.1;
-    border-radius: 50%;
-    filter: blur(80px);
+    bottom: 0; left: 0;
+    width: 100%; height: 100px;
+    background: linear-gradient(to top, var(--sand) 0%, transparent 100%);
   }
 
-  .final-cta .inner { position: relative; z-index: 1; }
+  .final-cta-content {
+    padding: 3rem 1.5rem 5rem;
+    position: relative;
+    z-index: 1;
+  }
+
   .final-cta .stitle { margin-bottom: 1rem; }
 
   .final-cta p {
@@ -556,7 +564,9 @@
 
   /* ===== RESPONSIVE ===== */
   @media (min-width: 768px) {
-    section { padding: 7rem 2.5rem; }
+    section { padding: 6rem 2.5rem; }
+
+    .hero-img-strip { height: 360px; }
 
     .about-layout {
       flex-direction: row;
@@ -572,20 +582,22 @@
       grid-template-columns: 1fr 1fr;
       gap: 1.2rem;
     }
+
+    .img-strip { height: 300px; }
+
+    .final-cta-img { height: 320px; }
   }
 
   @media (max-width: 480px) {
     .hero h1 { font-size: 1.8rem; }
-
+    .hero-img-strip { height: 200px; }
     .cta { padding: 0.95rem 2rem; font-size: 0.9rem; }
-
     .about-img { width: 160px; height: 160px; }
-
     .pain-list li { font-size: 1.02rem; }
-
     .guide-card { padding: 1.1rem; }
-
     .paradigm .stitle { font-size: 1.6rem; }
+    .img-strip { height: 160px; }
+    .final-cta-img { height: 180px; }
   }
 </style>
 </head>
@@ -593,23 +605,23 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="blob blob--1"></div>
-    <div class="blob blob--2"></div>
-    <div class="blob blob--3"></div>
-
-    <div class="hero-content">
-      <p class="eyebrow">Nutrición · Fertilidad · Metabolismo Hormonal</p>
-      <h1>Si estás buscando embarazo y no llega, puede que <em>nadie esté mirando lo correcto.</em></h1>
-      <p class="hero-sub">Descargá la guía gratuita donde te explico qué parámetros realmente importan para tu fertilidad — más allá de lo que te dicen como "normal".</p>
-      <div class="hero-cta-wrap">
-        <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
-          <span>Quiero la guía gratuita</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <p class="cta-note">Es gratuita · Sin spam · Directo a tu email</p>
+    <div class="hero-top">
+      <div class="hero-content">
+        <p class="eyebrow">Nutrición · Fertilidad · Metabolismo Hormonal</p>
+        <h1>Si estás buscando embarazo y no llega, puede que <em>nadie esté mirando lo correcto.</em></h1>
+        <p class="hero-sub">Descargá la guía gratuita donde te explico qué parámetros realmente importan para tu fertilidad — más allá de lo que te dicen como "normal".</p>
+        <div class="hero-cta-wrap">
+          <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
+            <span>Quiero la guía gratuita</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <p class="cta-note">Es gratuita · Sin spam · Directo a tu email</p>
+        </div>
       </div>
     </div>
-
+    <div class="hero-img-strip">
+      <img src="images/hero-food.JPG" alt="Alimentos saludables para la fertilidad">
+    </div>
   </section>
 
   <!-- IDENTIFICATION -->
@@ -625,6 +637,11 @@
       </ul>
     </div>
   </section>
+
+  <!-- BOTANICAL SEPARATOR -->
+  <div class="img-strip rv">
+    <img src="images/botanicals.jpg" alt="Hierbas y flores naturales">
+  </div>
 
   <!-- ABOUT -->
   <section class="about">
@@ -684,6 +701,11 @@
     </div>
   </section>
 
+  <!-- WINDOW SEPARATOR -->
+  <div class="img-strip rv">
+    <img src="images/window-flowers.JPG" alt="Luz natural y flores">
+  </div>
+
   <!-- FERTIL -->
   <section class="fertil rv">
     <div class="fertil-inner">
@@ -694,13 +716,18 @@
 
   <!-- FINAL CTA -->
   <section class="final-cta">
-    <div class="inner rv">
-      <h2 class="stitle">Empezá a mirar tu fertilidad <em>de otra forma.</em></h2>
-      <p>Descargá la guía gratuita y da el primer paso.</p>
-      <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
-        <span>Quiero la guía gratuita</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
+    <div class="final-cta-img rv">
+      <img src="images/hands-abdomen.JPG" alt="Esperanza y cuidado">
+    </div>
+    <div class="final-cta-content">
+      <div class="inner rv">
+        <h2 class="stitle">Empezá a mirar tu fertilidad <em>de otra forma.</em></h2>
+        <p>Descargá la guía gratuita y da el primer paso.</p>
+        <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
+          <span>Quiero la guía gratuita</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -712,7 +739,7 @@
   <script>
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.rv').forEach(el => obs.observe(el));
   </script>
 
