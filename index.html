@@ -71,11 +71,11 @@
   }
 
   .hero-img-strip {
-    width: 100vw;
-    height: 280px;
+    width: 100%;
+    height: 55vw;
+    max-height: 360px;
     overflow: hidden;
     position: relative;
-    margin-left: calc(-50vw + 50%);
   }
 
   .hero-img-strip img {
@@ -567,7 +567,7 @@
   @media (min-width: 768px) {
     section { padding: 6rem 2.5rem; }
 
-    .hero-img-strip { height: 360px; }
+    .hero-img-strip { max-height: 400px; }
 
     .about-layout {
       flex-direction: row;
@@ -591,7 +591,7 @@
 
   @media (max-width: 480px) {
     .hero h1 { font-size: 1.8rem; }
-    .hero-img-strip { height: 200px; }
+    .hero-img-strip { height: 50vw; }
     .cta { padding: 0.95rem 2rem; font-size: 0.9rem; }
     .about-img { width: 160px; height: 160px; }
     .pain-list li { font-size: 1.02rem; }
