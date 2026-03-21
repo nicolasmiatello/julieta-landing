@@ -56,7 +56,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
     background: var(--sand);
   }
 
@@ -72,26 +71,15 @@
 
   .hero-img-strip {
     width: 100%;
-    height: 55vw;
-    max-height: 360px;
     overflow: hidden;
     position: relative;
+    line-height: 0;
   }
 
   .hero-img-strip img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     display: block;
-  }
-
-  .hero-img-strip::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 80px;
-    background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
   }
 
   .hero-content {
@@ -248,7 +236,7 @@
   }
 
   /* ===== IDENTIFICATION ===== */
-  .identification { background-color: var(--cream); }
+  .identification { background-color: var(--cream); padding-top: 3rem; }
 
   .pain-list {
     list-style: none;
@@ -567,8 +555,7 @@
   @media (min-width: 768px) {
     section { padding: 6rem 2.5rem; }
 
-    .hero-img-strip { max-height: 400px; }
-
+    
     .about-layout {
       flex-direction: row;
       align-items: flex-start;
@@ -591,7 +578,6 @@
 
   @media (max-width: 480px) {
     .hero h1 { font-size: 1.8rem; }
-    .hero-img-strip { height: 50vw; }
     .cta { padding: 0.95rem 2rem; font-size: 0.9rem; }
     .about-img { width: 160px; height: 160px; }
     .pain-list li { font-size: 1.02rem; }
