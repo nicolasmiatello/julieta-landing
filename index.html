@@ -509,6 +509,128 @@
     margin-bottom: 2.5rem;
   }
 
+  /* ===== PRESS / AUTORIDAD ===== */
+  .press {
+    background: var(--sand-light);
+    text-align: center;
+    padding: 4.5rem 1.5rem;
+  }
+
+  .press-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .press-logo {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-tertiary);
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+  }
+
+  .press-logo:hover { opacity: 0.85; }
+
+  .press-articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .press-article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.4rem;
+    background: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--sand-dark);
+  }
+
+  .press-article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .press-source {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rose);
+    white-space: nowrap;
+    min-width: 60px;
+  }
+
+  .press-title {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .press-arrow {
+    margin-left: auto;
+    color: var(--rose-light);
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* ===== CONSULTAS (backup) ===== */
+  .consultas-backup {
+    background: var(--sand);
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+  }
+
+  .consultas-backup p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin: 0 auto 1.8rem;
+    line-height: 1.7;
+  }
+
+  .consultas-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .consulta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--rose-dark);
+    background: transparent;
+    padding: 0.75rem 1.6rem;
+    border-radius: 60px;
+    border: 1.5px solid var(--rose-pale);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .consulta-btn:hover {
+    background: var(--rose-pale);
+    color: var(--rose-deep);
+    border-color: var(--rose-light);
+  }
+
   /* ===== FOOTER ===== */
   footer {
     background-color: var(--text-primary);
@@ -725,6 +847,49 @@
     </div>
   </section>
 
+  <!-- PRESS / AUTORIDAD -->
+  <section class="press">
+    <div class="inner">
+      <p class="label rv">En medios</p>
+      <h2 class="stitle rv rv-d1">Hablando de nutrición y fertilidad en</h2>
+      <div class="press-logos rv rv-d1">
+        <span class="press-logo">Infobae</span>
+        <span class="press-logo">Clarín</span>
+        <span class="press-logo">Para Ti</span>
+      </div>
+      <div class="press-articles">
+        <a href="https://www.infobae.com/salud/2022/06/24/la-inflamacion-la-culpable-de-todos-los-males-cual-es-su-relacion-con-la-infertilidad/" target="_blank" rel="noopener" class="press-article rv rv-d1">
+          <span class="press-source">Infobae</span>
+          <span class="press-title">La inflamación y su relación con la infertilidad</span>
+          <span class="press-arrow">→</span>
+        </a>
+        <a href="https://www.infobae.com/salud/2022/08/31/diez-alimentos-que-no-pueden-faltar-durante-el-embarazo/" target="_blank" rel="noopener" class="press-article rv rv-d2">
+          <span class="press-source">Infobae</span>
+          <span class="press-title">10 alimentos que no pueden faltar durante el embarazo</span>
+          <span class="press-arrow">→</span>
+        </a>
+        <a href="https://www.clarin.com/buena-vida/alimentacion-antiinflamatoria-5-consejos-incorporarla_0_d8d3Dm9S2w.html" target="_blank" rel="noopener" class="press-article rv rv-d1">
+          <span class="press-source">Clarín</span>
+          <span class="press-title">Alimentación antiinflamatoria: 5 consejos para tu día a día</span>
+          <span class="press-arrow">→</span>
+        </a>
+        <a href="https://www.clarin.com/entremujeres/hogar-y-familia/habitos-alimentos-terapias-ayudan-mejorar-fertilidad_0_-7mFNNerC.html" target="_blank" rel="noopener" class="press-article rv rv-d2">
+          <span class="press-source">Clarín</span>
+          <span class="press-title">Hábitos, alimentos y terapias que ayudan a mejorar la fertilidad</span>
+          <span class="press-arrow">→</span>
+        </a>
+        <a href="https://www.parati.com.ar/lifestyle/semana-mundial-de-la-lactancia-materna-como-deberia-alimentarse-la-mama-para-nutrir-a-su-bebe/" target="_blank" rel="noopener" class="press-article rv rv-d1">
+          <span class="press-source">Para Ti</span>
+          <span class="press-title">Lactancia materna: cómo debería alimentarse la mamá</span>
+          <span class="press-arrow">→</span>
+        </a>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-tertiary);" class="rv">
+        <a href="https://subscribepage.io/medios-julieta" target="_blank" rel="noopener" style="color: var(--rose); text-decoration: underline; font-weight: 400;">Ver todas las notas →</a>
+      </p>
+    </div>
+  </section>
+
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="final-cta-img rv">
@@ -743,6 +908,21 @@
             O conocé Fértil, mi programa 1:1 →
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTAS (backup — último recurso) -->
+  <section class="consultas-backup">
+    <div class="inner rv">
+      <p>Si sentís que todavía no es el momento para un proceso completo, podés empezar con una consulta individual.</p>
+      <div class="consultas-btns">
+        <a href="https://patient.consultoriomovil.net/patient/web/olivosmedical/31790/lupardo-julieta?utm_source=julietalupardo.com&utm_medium=web&utm_campaign=consulta_presencial" target="_blank" rel="noopener" class="consulta-btn">
+          📍 Consulta presencial
+        </a>
+        <a href="https://instagram.com/julilupardo" target="_blank" rel="noopener" class="consulta-btn">
+          💬 Consulta online
+        </a>
       </div>
     </div>
   </section>
