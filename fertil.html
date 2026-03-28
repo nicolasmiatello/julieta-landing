@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fértil 1:1 — Acompañamiento Nutricional para Fertilidad | Julieta Lupardo</title>
-    <meta name="description" content="Acompañamiento nutricional 1:1 personalizado durante 8 semanas para mejorar tus parámetros de fertilidad. Lic. Julieta Lupardo.">
+    <title>Fértil — Sección Rediseñada v3</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,42 +19,16 @@
             --text-dark: #3A2F2F;
             --text-mid: #6B5A5A;
             --text-light: #9A8585;
-            --sage-accent: #8FA89A;
-            --sage-light: #E8F0EB;
             --white: #FFFFFF;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Outfit', sans-serif;
             background: var(--cream);
             color: var(--text-dark);
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-
-        .serif { font-family: 'DM Serif Display', serif; }
-
-        /* ── Animations ── */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ── Layout ── */
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 28px;
         }
 
         .container--narrow {
@@ -64,957 +37,354 @@
             padding: 0 28px;
         }
 
-        /* ── CTA Button ── */
-        .cta-btn {
-            display: inline-block;
-            background: var(--rosa-deep);
-            color: var(--white);
-            font-family: 'Outfit', sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            padding: 18px 48px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            background: #7D4E55;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 36px rgba(150,99,107,0.35);
-        }
-
         /* ══════════════════════════════════════
-           HERO
+           INCLUDES — REDISEÑO v3
         ══════════════════════════════════════ */
-        .hero {
-            padding: 60px 0 50px;
-            text-align: center;
-            position: relative;
+        .includes-new {
+            padding: 70px 0;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: radial-gradient(ellipse at 30% 20%, rgba(184,132,139,0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 70% 80%, rgba(143,168,154,0.06) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--rosa-deep);
-            background: var(--rosa-pale);
-            padding: 6px 18px;
-            border-radius: 50px;
-            margin-bottom: 32px;
-        }
-
-        .hero h1 {
+        .includes-new h2 {
             font-family: 'DM Serif Display', serif;
-            font-size: clamp(32px, 5.5vw, 46px);
-            line-height: 1.2;
+            font-size: clamp(24px, 4vw, 30px);
             color: var(--text-dark);
-            margin-bottom: 24px;
-            font-weight: 400;
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--rosa-deep);
-        }
-
-        .hero-sub {
-            font-size: 17px;
-            line-height: 1.7;
-            color: var(--text-mid);
-            max-width: 540px;
-            margin: 0 auto 40px;
-            font-weight: 300;
-        }
-
-        /* ══════════════════════════════════════
-           PROBLEM
-        ══════════════════════════════════════ */
-        .problem {
-            padding: 50px 0;
-            background: var(--warm-white);
-        }
-
-        .problem h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(26px, 4vw, 34px);
-            color: var(--text-dark);
-            margin-bottom: 36px;
+            margin-bottom: 12px;
             text-align: center;
             font-weight: 400;
         }
 
-        .problem-text {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-mid);
-            font-weight: 300;
-        }
-
-        .problem-text p {
-            margin-bottom: 20px;
-        }
-
-        .problem-text p:last-child {
-            color: var(--rosa-deep);
-            font-weight: 500;
-            font-size: 17px;
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid var(--rosa-pale);
-        }
-
-        /* ══════════════════════════════════════
-           SOLUTION
-        ══════════════════════════════════════ */
-        .solution {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .solution h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(26px, 4vw, 34px);
-            color: var(--text-dark);
-            margin-bottom: 28px;
-            font-weight: 400;
-        }
-
-        .solution-body {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-mid);
-            font-weight: 300;
-            text-align: left;
-            margin-bottom: 28px;
-        }
-
-        .solution-nots {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            margin: 32px 0;
-            text-align: left;
-        }
-
-        .solution-not {
+        .includes-new .section-subtitle {
             font-size: 15px;
-            color: var(--text-light);
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(184,132,139,0.12);
-            font-weight: 300;
-        }
-
-        .solution-not span {
-            color: var(--rosa);
-            font-weight: 500;
-            margin-right: 8px;
-        }
-
-        .solution-yes {
-            font-size: 17px;
-            color: var(--text-dark);
-            font-weight: 400;
-            line-height: 1.7;
-            margin-top: 32px;
-            padding: 24px 28px;
-            background: var(--rosa-pale);
-            border-radius: 12px;
-        }
-
-        .solution-close {
-            font-size: 16px;
-            color: var(--rosa-deep);
-            font-weight: 500;
-            margin-top: 28px;
-            font-style: italic;
-        }
-
-        /* ══════════════════════════════════════
-           PROCESS
-        ══════════════════════════════════════ */
-        .process {
-            padding: 50px 0;
-            background: var(--warm-white);
-        }
-
-        .process h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(26px, 4vw, 34px);
-            color: var(--text-dark);
-            margin-bottom: 48px;
+            color: var(--text-mid);
             text-align: center;
-            font-weight: 400;
+            font-weight: 300;
+            margin-bottom: 44px;
+            line-height: 1.6;
         }
 
-        .process-timeline {
+        /* ── TIMELINE ── */
+        .program-timeline {
             position: relative;
-            padding-left: 36px;
+            padding-left: 44px;
+            margin-bottom: 56px;
         }
 
-        .process-timeline::before {
+        .program-timeline::before {
             content: '';
             position: absolute;
-            left: 6px;
-            top: 8px;
-            bottom: 8px;
+            left: 14px;
+            top: 24px;
+            bottom: 24px;
             width: 2px;
             background: linear-gradient(to bottom, var(--rosa-pale), var(--rosa), var(--rosa-pale));
             border-radius: 2px;
         }
 
-        .process-step {
+        .timeline-step {
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+            padding: 20px 24px;
+            background: var(--warm-white);
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .process-step:last-child {
+        .timeline-step:last-child {
             margin-bottom: 0;
         }
 
-        .process-step::before {
+        .timeline-step:hover {
+            border-color: var(--rosa-pale);
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(150, 99, 107, 0.08);
+        }
+
+        .timeline-step::before {
             content: '';
             position: absolute;
-            left: -36px;
-            top: 8px;
-            width: 14px;
-            height: 14px;
+            left: -38px;
+            top: 26px;
+            width: 12px;
+            height: 12px;
             background: var(--rosa);
             border-radius: 50%;
             border: 3px solid var(--cream);
             box-shadow: 0 0 0 2px var(--rosa-light);
+            z-index: 1;
         }
 
-        .process-step.step-start::before {
-            background: var(--rosa-deep);
+        .timeline-step.step-highlight::before {
             width: 16px;
             height: 16px;
-            left: -37px;
-            top: 7px;
+            left: -40px;
+            top: 24px;
+            background: var(--rosa-deep);
         }
 
-        .process-label {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--rosa);
+        .timeline-step.step-highlight {
+            background: var(--rosa-pale);
+            border-color: var(--rosa-light);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 6px;
         }
 
-        .process-step h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .process-step p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-mid);
-            font-weight: 300;
-        }
-
-        .process-ongoing {
-            margin-top: 48px;
-            padding: 28px;
-            background: var(--cream);
-            border-radius: 12px;
-            border-left: 3px solid var(--rosa);
-        }
-
-        .process-ongoing h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 19px;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .process-ongoing p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-mid);
-            font-weight: 300;
-        }
-
-        /* ══════════════════════════════════════
-           INCLUDES
-        ══════════════════════════════════════ */
-        .includes {
-            padding: 50px 0;
-        }
-
-        .includes h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(24px, 4vw, 30px);
-            color: var(--text-dark);
-            margin-bottom: 36px;
-            text-align: center;
-            font-weight: 400;
-        }
-
-        .includes-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .include-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 18px 22px;
-            background: var(--warm-white);
-            border-radius: 10px;
-            transition: transform 0.2s ease;
-        }
-
-        .include-item:hover {
-            transform: translateX(4px);
-        }
-
-        .include-icon {
-            flex-shrink: 0;
-            width: 36px;
-            height: 36px;
-            background: var(--rosa-pale);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--rosa-deep);
-            font-size: 16px;
+        .step-badge {
+            display: inline-block;
+            font-size: 10px;
             font-weight: 600;
-        }
-
-        .include-text {
-            font-size: 15px;
-            line-height: 1.5;
-            color: var(--text-dark);
-            font-weight: 400;
-        }
-
-        .include-item.highlight {
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--rosa-deep);
             background: var(--rosa-pale);
-            border: 1px solid var(--rosa-light);
-            margin-bottom: 4px;
+            padding: 3px 10px;
+            border-radius: 50px;
+            white-space: nowrap;
         }
 
-        .include-item.highlight:last-of-type {
-            margin-bottom: 16px;
-        }
-
-        .include-item.highlight .include-icon {
+        .timeline-step.step-highlight .step-badge {
             background: var(--rosa-deep);
             color: var(--white);
         }
 
-        .include-item.highlight .include-text {
-            font-weight: 500;
-        }
-
-        .include-text small {
-            display: block;
-            font-size: 13px;
-            color: var(--text-light);
-            font-weight: 300;
-            margin-top: 2px;
-        }
-
-        /* ══════════════════════════════════════
-           FOR WHO
-        ══════════════════════════════════════ */
-        .for-who {
-            padding: 50px 0;
-            background: var(--warm-white);
-        }
-
-        .for-who h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(24px, 4vw, 30px);
-            color: var(--text-dark);
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: 400;
-        }
-
-        .for-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        @media (max-width: 600px) {
-            .for-columns {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .for-col {
-            padding: 28px 24px;
-            border-radius: 12px;
-        }
-
-        .for-col--yes {
-            background: var(--cream);
-            border: 1px solid var(--rosa-pale);
-        }
-
-        .for-col--no {
-            background: var(--cream);
-            border: 1px solid var(--cream-dark);
-        }
-
-        .for-col h3 {
+        .step-title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
-            margin-bottom: 18px;
+            color: var(--text-dark);
             font-weight: 400;
         }
 
-        .for-col--yes h3 { color: var(--rosa-deep); }
-        .for-col--no h3 { color: var(--text-light); }
-
-        .for-col li {
+        .step-desc {
             font-size: 14px;
             line-height: 1.6;
             color: var(--text-mid);
             font-weight: 300;
-            margin-bottom: 10px;
-            list-style: none;
-            padding-left: 20px;
-            position: relative;
         }
 
-        .for-col--yes li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--rosa);
-            font-weight: 600;
-        }
-
-        .for-col--no li::before {
-            content: '×';
-            position: absolute;
-            left: 0;
-            color: var(--text-light);
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        /* ══════════════════════════════════════
-           ABOUT
-        ══════════════════════════════════════ */
-        .about {
-            padding: 50px 0;
-        }
-
-        .about h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(24px, 4vw, 30px);
-            color: var(--text-dark);
-            margin-bottom: 28px;
-            text-align: center;
-            font-weight: 400;
-        }
-
-        .about-content {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-mid);
-            font-weight: 300;
-            text-align: center;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-
-        .about-content p {
-            margin-bottom: 18px;
-        }
-
-        .about-credentials {
-            text-align: center;
-            margin-top: 28px;
-            padding-top: 24px;
-            border-top: 1px solid var(--rosa-pale);
-        }
-
-        .about-credentials strong {
-            font-size: 17px;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .about-credentials span {
-            display: block;
-            font-size: 13px;
-            color: var(--text-light);
-            font-weight: 300;
-            margin-top: 4px;
-        }
-
-        /* ══════════════════════════════════════
-           FINAL CTA
-        ══════════════════════════════════════ */
-        .final-cta {
-            padding: 60px 0;
-            background: linear-gradient(135deg, var(--rosa-deep) 0%, #7D4E55 100%);
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(26px, 4.5vw, 36px);
-            color: var(--white);
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        .final-cta p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: rgba(255,255,255,0.8);
-            font-weight: 300;
-            max-width: 460px;
-            margin: 0 auto 16px;
-        }
-
-        .final-cta .cta-btn {
-            background: var(--white);
-            color: var(--rosa-deep);
-            font-weight: 600;
-            margin-top: 20px;
-        }
-
-        .final-cta .cta-btn:hover {
-            background: var(--cream);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-        }
-
-        .final-cta .scarcity {
-            font-size: 13px;
-            color: rgba(255,255,255,0.6);
-            font-weight: 300;
-            margin-top: 16px;
-        }
-
-        /* ══════════════════════════════════════
-           FOOTER
-        ══════════════════════════════════════ */
-        footer {
-            padding: 32px 0;
-            text-align: center;
-            background: var(--cream);
-        }
-
-        footer p {
+        .step-duration {
+            display: inline-block;
             font-size: 12px;
             color: var(--text-light);
-            font-weight: 300;
-            line-height: 1.6;
+            font-weight: 400;
+            margin-top: 6px;
+            letter-spacing: 0.02em;
         }
 
-        /* ── Divider ── */
-        .section-divider {
-            width: 50px;
-            height: 2px;
-            background: var(--rosa-pale);
-            margin: 0 auto 40px;
-            border-radius: 2px;
+        /* ══════════════════════════════════════
+           ALWAYS-ON — v3 con más contraste
+        ══════════════════════════════════════ */
+        .always-on {
+            background: var(--rosa-deep);
+            border-radius: 20px;
+            padding: 44px 32px 40px;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* ── Mid CTA ── */
-        .mid-cta {
+        .always-on::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+
+        .always-on::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 140px;
+            height: 140px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .always-on-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(20px, 3.5vw, 24px);
+            color: var(--white);
             text-align: center;
-            padding: 50px 0;
+            margin-bottom: 8px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
 
-        .mid-cta p {
+        .always-on-subtitle {
             font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 20px;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
             font-weight: 300;
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* ── Responsive ── */
-        @media (max-width: 480px) {
-            .hero { padding: 60px 0 50px; }
-            .hero-badge { font-size: 10px; }
-            section { padding: 50px 0; }
-            .process-timeline { padding-left: 30px; }
-            .include-item { padding: 14px 16px; }
-            .hero-img { height: 280px !important; }
-            .section-img { height: 220px !important; }
-            .about-layout { flex-direction: column !important; }
-            .about-photo { width: 100% !important; height: 280px !important; }
+        .always-on-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* ── Section Images ── */
-        .hero-img {
-            width: 100%;
-            max-width: 900px;
-            margin: 48px auto 0;
-            display: block;
-            height: 420px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 16px;
+        @media (max-width: 500px) {
+            .always-on-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .always-on {
+                padding: 36px 22px 32px;
+            }
         }
 
-        .section-img {
-            width: 100%;
-            max-width: 900px;
-            margin: 16px auto 0;
-            display: block;
-            height: 360px;
-            object-fit: cover;
-            object-position: center;
+        .always-on-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: var(--white);
             border-radius: 12px;
+            padding: 20px 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
 
-        .section-img--tall {
-            height: 400px;
+        .always-on-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
 
-        .section-img--short {
-            height: 280px;
-        }
-
-        @media (min-width: 900px) {
-            .hero-img, .section-img {
-                width: 100vw;
-                max-width: 100vw;
-                margin-left: calc(-50vw + 50%);
-                border-radius: 0;
-                height: 450px;
-                margin-bottom: 0;
-            }
-            .hero-img {
-                margin-top: 48px;
-            }
-            .section-img {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-        }
-
-        .img-placeholder {
-            width: 100%;
+        .always-on-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--rosa-pale);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--rosa-pale) 0%, var(--cream-dark) 100%);
-            color: var(--text-light);
-            font-size: 13px;
+            font-size: 18px;
+        }
+
+        .always-on-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .always-on-text small {
+            display: block;
+            font-size: 12px;
+            color: var(--text-mid);
             font-weight: 300;
-            letter-spacing: 0.03em;
-            border: 2px dashed var(--rosa-light);
-        }
-
-        .about-layout {
-            display: flex;
-            gap: 36px;
-            align-items: center;
-        }
-
-        .about-photo {
-            flex-shrink: 0;
-            width: 200px;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .final-cta-img {
-            width: 100%;
-            max-width: 320px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 0 auto 32px;
-            border: 5px solid rgba(255,255,255,0.15);
+            margin-top: 3px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-<!-- ══════════ HERO ══════════ -->
-<section class="hero">
-    <div class="container" style="position:relative;">
-        <div class="reveal">
-            <span class="hero-badge">Acompañamiento 1:1</span>
-        </div>
-        <h1 class="reveal">
-            Si estás buscando embarazo, necesitás algo más que <em>"comer sano"</em>
-        </h1>
-        <p class="hero-sub reveal">
-            Fértil es un acompañamiento nutricional 1:1 personalizado durante 8 semanas para mejorar tus parámetros de fertilidad y preparar tu cuerpo antes de buscar embarazo.
-        </p>
-        <p class="reveal" style="font-size:14px; color:var(--text-light); font-weight:300; margin-bottom:36px; font-style:italic;">
-            Hoy acompaño a mujeres con SOP, resistencia a la insulina, baja reserva ovárica, endometriosis y otros diagnósticos.
-        </p>
-        <div class="reveal">
-            <a href="https://ig.me/m/julilupardo" class="cta-btn">Escribime "FÉRTIL" por Instagram →</a>
-        </div>
-        <!-- FOTO 1: Hero -->
-        <div class="reveal">
-            <img src="images/fertil-hero.jpg" alt="Preparación nutricional para fertilidad" class="hero-img">
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ PROBLEM ══════════ -->
-<section class="problem">
+<!-- ══════════ INCLUDES — REDISEÑO v3 ══════════ -->
+<section class="includes-new">
     <div class="container--narrow">
-        <h2 class="reveal">Si algo de esto te suena, no estás sola.</h2>
-        <div class="problem-text reveal">
-            <p>Llevás meses buscando y no pasa nada. O todavía no empezaste pero querés llegar preparada.</p>
-            <p>Tus análisis están dentro del rango normal. Pero "normal" no es lo mismo que "óptimo" cuando hablás de fertilidad.</p>
-            <p>Buscaste en Google y cada página te dice algo distinto. Un día es la vitamina D, al otro el ácido fólico, después la tiroides. No sabés por dónde empezar.</p>
-            <p>Probaste comer más sano, tomar suplementos, hacer cambios sueltos. Pero sin un plan real, sin saber qué valores tenés que mover, y sin nadie que te guíe en el proceso.</p>
-            <p>No es que estés haciendo algo mal. Es que estás haciendo cosas sueltas, sin un plan claro.</p>
+        <h2>Tu recorrido en Fértil</h2>
+        <p class="section-subtitle">8 semanas de acompañamiento estructurado, paso a paso.</p>
+
+        <!-- TIMELINE -->
+        <div class="program-timeline">
+
+            <div class="timeline-step">
+                <div class="step-header">
+                    <span class="step-badge">Al ingresar</span>
+                </div>
+                <div class="step-title">Cuestionario de ingreso</div>
+                <div class="step-desc">Completás un cuestionario detallado sobre tu historia clínica, hábitos, análisis y objetivos. Así Julieta llega a la primera consulta con toda tu información.</div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="step-header">
+                    <span class="step-badge">Antes de la primera consulta</span>
+                </div>
+                <div class="step-title">Guía de bienvenida al programa</div>
+                <div class="step-desc">Una guía exclusiva para participantes de Fértil con todo lo que necesitás saber para arrancar: cómo funciona el programa, qué esperar en cada etapa y cómo aprovechar al máximo el proceso.</div>
+            </div>
+
+            <div class="timeline-step step-highlight">
+                <div class="step-header">
+                    <span class="step-badge">Semana 1</span>
+                </div>
+                <div class="step-title">Evaluación completa de tu caso</div>
+                <div class="step-desc">Primera consulta en profundidad. Con la información del cuestionario, Julieta evalúa tu situación y diseña tu plan personalizado.</div>
+                <span class="step-duration">60 minutos · videollamada</span>
+            </div>
+
+            <div class="timeline-step">
+                <div class="step-header">
+                    <span class="step-badge">Semanas 2 – 7</span>
+                </div>
+                <div class="step-title">Ajustes personalizados en cada etapa</div>
+                <div class="step-desc">Consultas de seguimiento para evaluar avances, ajustar el plan y resolver dudas.</div>
+                <span class="step-duration">4 consultas · 30 minutos cada una</span>
+            </div>
+
+            <div class="timeline-step step-highlight">
+                <div class="step-header">
+                    <span class="step-badge">Semana 8</span>
+                </div>
+                <div class="step-title">Informe de cierre</div>
+                <div class="step-desc">Resultados, evolución de tus parámetros y recomendaciones claras para seguir después del programa.</div>
+            </div>
+
         </div>
-        <!-- FOTO 2: Problema -->
-        <div class="reveal" style="margin-top:16px;">
-            <img src="images/fertil-thinking.jpg" alt="Buscando respuestas sobre fertilidad" class="section-img">
+
+        <!-- ALWAYS-ON -->
+        <div class="always-on">
+            <div class="always-on-title">Acompañamiento constante</div>
+            <p class="always-on-subtitle">Esto no es una consulta aislada. Durante las 8 semanas vas a contar con:</p>
+            <div class="always-on-grid">
+                <div class="always-on-item">
+                    <div class="always-on-icon">💬</div>
+                    <div class="always-on-text">
+                        Contacto directo por WhatsApp
+                        <small>Para dudas y ajustes en el momento</small>
+                    </div>
+                </div>
+                <div class="always-on-item">
+                    <div class="always-on-icon">📋</div>
+                    <div class="always-on-text">
+                        Check-in semanal
+                        <small>Seguimiento estructurado para sostener el proceso</small>
+                    </div>
+                </div>
+                <div class="always-on-item">
+                    <div class="always-on-icon">🔬</div>
+                    <div class="always-on-text">
+                        Interpretación de análisis
+                        <small>Revisión de tus estudios con criterio de fertilidad</small>
+                    </div>
+                </div>
+                <div class="always-on-item">
+                    <div class="always-on-icon">🍽️</div>
+                    <div class="always-on-text">
+                        Plan nutricional personalizado
+                        <small>Adaptado a tu diagnóstico, objetivos y etapa</small>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
-
-<!-- ══════════ SOLUTION ══════════ -->
-<section class="solution">
-    <div class="container--narrow">
-        <h2 class="reveal">Fértil no es una consulta. <br>Es un proceso.</h2>
-        <div class="reveal">
-            <p class="solution-body">
-                Es un acompañamiento 1:1 donde trabajamos tu caso de forma personalizada durante 8 semanas, con seguimiento real para generar cambios concretos en tus parámetros de fertilidad.
-            </p>
-            <div class="solution-nots">
-                <div class="solution-not"><span>No</span> es una dieta genérica.</div>
-                <div class="solution-not"><span>No</span> es un PDF con recetas.</div>
-                <div class="solution-not"><span>No</span> es una consulta aislada donde te llevás un plan y después te arreglás sola.</div>
-            </div>
-            <div class="solution-yes">
-                Es un proceso clínico guiado, adaptado a tu caso, donde vamos ajustando todo en base a cómo responde tu cuerpo, semana a semana.
-            </div>
-            <p class="solution-close">
-                Para que dejes de improvisar y empieces a trabajar con un plan claro sobre tu fertilidad.
-            </p>
-            <!-- FOTO 3: Escritorio -->
-            <div style="margin-top:16px;">
-                <img src="images/fertil-desk.jpg" alt="Plan nutricional personalizado" class="section-img">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ PROCESS ══════════ -->
-<section class="process">
-    <div class="container--narrow">
-        <h2 class="reveal">Cómo trabajamos durante las 8 semanas</h2>
-        <div class="process-timeline reveal">
-            <div class="process-step step-start">
-                <div class="process-label">Antes de empezar</div>
-                <h3>Formulario inicial</h3>
-                <p>Completás un formulario donde me contás tu historia clínica, tus hábitos, tus análisis previos y tus objetivos. Así llego a nuestra primera instancia con contexto completo de tu caso.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-label">Semanas 1–2</div>
-                <h3>Diagnóstico y plan</h3>
-                <p>Nos encontramos en una instancia inicial en profundidad. Revisamos tus análisis, tu diagnóstico y armamos tu plan nutricional personalizado. Sabés exactamente qué trabajar, por qué, y cómo.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-label">Semanas 3–5</div>
-                <h3>Implementación y ajustes</h3>
-                <p>Empezás a implementar el plan y nos encontramos en distintas instancias para ajustar según cómo vas evolucionando. Lo que funciona se sostiene, lo que no se adapta. No estás sola en el proceso.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-label">Semanas 6–8</div>
-                <h3>Consolidación y cierre</h3>
-                <p>Revisamos tus avances, consolidamos los cambios, y cerramos el proceso con un plan de continuidad para que sepas exactamente cómo seguir después.</p>
-            </div>
-        </div>
-
-        <!-- FOTO 4: Plantas -->
-        <div class="reveal" style="margin-top:16px;">
-            <img src="images/fertil-plants.jpg" alt="Crecimiento y proceso" class="section-img">
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ MID CTA ══════════ -->
-<div class="mid-cta">
-    <div class="container">
-        <p class="reveal">Si sentís que esto es lo que necesitás para tu fertilidad…</p>
-        <div class="reveal">
-            <a href="https://ig.me/m/julilupardo" class="cta-btn">Escribime "FÉRTIL" por Instagram →</a>
-        </div>
-    </div>
-</div>
-
-<!-- ══════════ INCLUDES ══════════ -->
-<section class="includes">
-    <div class="container--narrow">
-        <h2 class="reveal">Esto es lo que trabajamos juntas en Fértil:</h2>
-        <p class="reveal" style="font-size: 15px; color: var(--text-mid); font-weight: 300; text-align: center; max-width: 480px; margin: -20px auto 32px; line-height: 1.7;">No es una consulta aislada. Es un proceso completo donde acompañamos cada parte de tu fertilidad.</p>
-        <div class="includes-grid reveal">
-            <div class="include-item highlight">
-                <div class="include-icon">1</div>
-                <div class="include-text">
-                    Evaluación completa de tu caso
-                    <small>60 minutos</small>
-                </div>
-            </div>
-            <div class="include-item highlight">
-                <div class="include-icon">4</div>
-                <div class="include-text">
-                    Ajustes personalizados en cada etapa
-                    <small>30 minutos cada una</small>
-                </div>
-            </div>
-            <div class="include-item">
-                <div class="include-icon">✦</div>
-                <div class="include-text">
-                    Plan adaptado a tu diagnóstico, objetivos y etapa
-                </div>
-            </div>
-            <div class="include-item">
-                <div class="include-icon">✦</div>
-                <div class="include-text">
-                    Interpretación clara de tus estudios y próximos pasos
-                </div>
-            </div>
-            <div class="include-item">
-                <div class="include-icon">✦</div>
-                <div class="include-text">
-                    Contacto directo para dudas y ajustes en el momento
-                </div>
-            </div>
-            <div class="include-item">
-                <div class="include-icon">✦</div>
-                <div class="include-text">
-                    Seguimiento constante para sostener el proceso
-                </div>
-            </div>
-            <div class="include-item">
-                <div class="include-icon">✦</div>
-                <div class="include-text">
-                    Qué cambió y cómo seguir a partir de acá
-                </div>
-            </div>
-        </div>
-        <!-- FOTO 5: Flat lay -->
-        <div class="reveal" style="margin-top:16px;">
-            <img src="images/fertil-flatlay.jpg" alt="Acompañamiento organizado" class="section-img">
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ FOR WHO ══════════ -->
-<section class="for-who">
-    <div class="container">
-        <h2 class="reveal">¿Es para vos?</h2>
-        <div class="for-columns reveal">
-            <div class="for-col for-col--yes">
-                <h3>Es para vos si:</h3>
-                <ul>
-                    <li>Estás buscando embarazo o te estás preparando para buscar</li>
-                    <li>Querés optimizar tus parámetros antes de empezar</li>
-                    <li>Tenés SOP, resistencia a la insulina, hipotiroidismo, baja reserva ovárica, endometriosis u otra condición que puede afectar tu fertilidad</li>
-                    <li>Sentís que necesitás un plan claro y profesional, no más consejos sueltos</li>
-                    <li>Querés acompañamiento real durante el proceso, no una consulta aislada</li>
-                    <li>Sentís que estás haciendo todo "bien" pero no ves resultados</li>
-                </ul>
-            </div>
-            <div class="for-col for-col--no">
-                <h3>No es para vos si:</h3>
-                <ul>
-                    <li>Buscás una dieta rápida o un plan genérico</li>
-                    <li>No estás dispuesta a sostener cambios durante varias semanas</li>
-                    <li>Necesitás atención médica de urgencia o un tratamiento de reproducción asistida (puedo complementar, pero no reemplazar a tu médico)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ ABOUT ══════════ -->
-<section class="about">
-    <div class="container--narrow">
-        <h2 class="reveal">Quién te acompaña</h2>
-        <div class="about-layout reveal">
-            <!-- FOTO 6: Julieta -->
-            <img src="images/julieta.jpg" alt="Julieta Lupardo" class="about-photo">
-            <div>
-                <div class="about-content" style="text-align:left; max-width:none;">
-                    <p>Trabajo todos los días con mujeres que están buscando embarazo o preparándose para buscar. En el consultorio veo lo mismo una y otra vez: mujeres con análisis "normales" que en realidad tienen valores lejos de lo óptimo para fertilidad. Mujeres que llevan meses improvisando sin un plan claro.</p>
-                    <p>Fértil nace de eso: de la necesidad de acompañar este proceso de forma integral, personalizada, y con el seguimiento que realmente hace la diferencia.</p>
-                </div>
-                <div class="about-credentials" style="text-align:left;">
-                    <strong>Julieta Lupardo</strong>
-                    <span>Lic. en Nutrición · M.N. 6858 · M.P. 3265</span>
-                    <span>Especialista en fertilidad y metabolismo hormonal</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ FINAL CTA ══════════ -->
-<section class="final-cta">
-    <div class="container">
-        <!-- FOTO 7: Manos en abdomen -->
-        <div class="reveal">
-            <img src="images/fertil-hands.jpg" alt="Tu momento" class="final-cta-img">
-        </div>
-        <h2 class="reveal">Si sentís que es tu momento, escribime.</h2>
-        <p class="reveal">Escribime la palabra FÉRTIL por mensaje directo en Instagram y vemos tu caso juntas.</p>
-        <div class="reveal">
-            <a href="https://ig.me/m/julilupardo" class="cta-btn">Escribime "FÉRTIL" por Instagram →</a>
-        </div>
-        <p class="scarcity reveal">Trabajo con pocas pacientes en este formato para poder acompañar bien cada una.</p>
-        <p class="reveal" style="margin-top:12px;"><a href="https://www.instagram.com/julilupardo/" target="_blank" style="font-size:13px; color:rgba(255,255,255,0.5); text-decoration:underline; font-weight:300;">También podés encontrarme en @julilupardo</a></p>
-    </div>
-</section>
-
-<!-- ══════════ FOOTER ══════════ -->
-<footer>
-    <p>Julieta Lupardo · Lic. en Nutrición · M.N. 6858 · M.P. 3265<br>Especialista en fertilidad y metabolismo hormonal</p>
-</footer>
-
-<script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
