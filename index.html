@@ -64,7 +64,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 4rem 1.5rem 3rem;
+    padding: 2.5rem 1.5rem 2rem;
     position: relative;
     z-index: 2;
   }
@@ -79,7 +79,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--rose);
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.2rem;
     opacity: 0;
     animation: rise 0.8s ease-out 0.2s forwards;
   }
@@ -90,7 +90,7 @@
     font-weight: 400;
     line-height: 1.2;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     opacity: 0;
     animation: rise 0.9s ease-out 0.4s forwards;
   }
@@ -105,7 +105,7 @@
     font-weight: 300;
     color: var(--text-secondary);
     max-width: 540px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 1.8rem;
     line-height: 1.75;
     opacity: 0;
     animation: rise 0.9s ease-out 0.6s forwards;
@@ -127,18 +127,18 @@
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 1.05rem;
+    font-weight: 600;
     color: var(--cream);
-    background: linear-gradient(135deg, var(--rose-dark) 0%, var(--rose) 100%);
-    padding: 1.05rem 2.5rem;
+    background: linear-gradient(135deg, var(--rose-deep) 0%, var(--rose-dark) 100%);
+    padding: 1.2rem 3rem;
     border-radius: 60px;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 4px 22px rgba(150,99,107,0.2), 0 1px 3px rgba(150,99,107,0.1);
+    box-shadow: 0 6px 28px rgba(122,77,85,0.3), 0 2px 6px rgba(122,77,85,0.15);
     position: relative;
     overflow: hidden;
-    min-height: 52px;
+    min-height: 56px;
   }
 
   .cta::before {
@@ -165,7 +165,7 @@
     font-size: 0.78rem;
     font-weight: 300;
     color: var(--text-tertiary);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   /* ===== SECTIONS ===== */
@@ -565,8 +565,10 @@
   }
 
   @media (max-width: 480px) {
-    .hero h1 { font-size: 1.8rem; }
-    .cta { padding: 0.95rem 2rem; font-size: 0.9rem; }
+    .hero-top { padding: 1.8rem 1.2rem 1.5rem; }
+    .hero h1 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .hero-sub { margin-bottom: 1.2rem; font-size: 0.98rem; }
+    .cta { padding: 1.05rem 2.2rem; font-size: 0.95rem; }
     .about-img { width: 160px; height: 160px; }
     .pain-list li { font-size: 1.02rem; }
     .guide-card { padding: 1.1rem; }
@@ -586,13 +588,14 @@
         <h1>Si estás buscando embarazo y no llega, puede que <em>nadie esté mirando lo correcto.</em></h1>
         <p class="hero-sub">Descargá la guía gratuita donde te explico qué parámetros realmente importan para tu fertilidad — más allá de lo que te dicen como "normal".</p>
         <div class="hero-cta-wrap">
+          <p style="font-size: 0.78rem; font-weight: 500; color: var(--rose-dark); margin-bottom: 0.6rem; letter-spacing: 0.02em;">📘 Guía gratuita</p>
           <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
-            <span>Quiero la guía gratuita</span>
+            <span>Descargar la guía ahora</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           <p class="cta-note">Es gratuita · Sin spam · Directo a tu email</p>
-          <p style="margin-top: 1.2rem; font-size: 0.82rem; font-weight: 300; color: var(--text-tertiary);">
-            ¿Ya estás buscando embarazo? <a href="/fertil" style="color: var(--rose-dark); text-decoration: underline; font-weight: 400;">Conocé Fértil →</a>
+          <p style="margin-top: 0.9rem; font-size: 0.82rem; font-weight: 300; color: var(--text-tertiary);">
+            ¿Ya estás buscando embarazo? <a href="/fertil" style="color: var(--rose-dark); text-decoration: underline; font-weight: 400;">Quiero trabajar mi caso en profundidad →</a>
           </p>
         </div>
       </div>
