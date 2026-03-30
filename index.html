@@ -177,6 +177,40 @@
     margin-top: 0.5rem;
   }
 
+  /* === HERO SECONDARY CTA === */
+  .hero-secondary-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--rose-dark);
+    background: transparent;
+    border: 1.5px solid var(--rose-pale);
+    border-radius: 60px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .hero-secondary-cta:hover {
+    background: var(--rose-pale);
+    color: var(--rose-deep);
+    border-color: var(--rose-light);
+    transform: translateY(-2px);
+  }
+
+  .hero-secondary-cta svg {
+    width: 14px; height: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .hero-secondary-cta:hover svg {
+    transform: translateX(3px);
+  }
+
   /* ===== SECTIONS ===== */
   section { padding: 5rem 1.5rem; }
 
@@ -259,6 +293,56 @@
     background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
     border-radius: 50%;
     margin-top: 0.4rem;
+  }
+
+  /* ===== MINI FÉRTIL BRIDGE ===== */
+  .fertil-bridge {
+    background: var(--cream);
+    padding: 0 1.5rem 3.5rem;
+    text-align: center;
+  }
+
+  .fertil-bridge-inner {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    border-top: 1px solid var(--sand);
+  }
+
+  .fertil-bridge p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+  }
+
+  .fertil-bridge-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--rose-dark);
+    text-decoration: none;
+    padding: 0.6rem 0;
+    border-bottom: 1.5px solid var(--rose-pale);
+    transition: all 0.3s ease;
+  }
+
+  .fertil-bridge-link:hover {
+    color: var(--rose-deep);
+    border-bottom-color: var(--rose-dark);
+  }
+
+  .fertil-bridge-link svg {
+    width: 16px; height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .fertil-bridge-link:hover svg {
+    transform: translateX(3px);
   }
 
   /* ===== ABOUT ===== */
@@ -426,7 +510,76 @@
     padding-top: 1rem;
   }
 
-  /* ===== FERTIL ===== */
+  /* ===== POST-GUIDE BRIDGE ===== */
+  .post-guide-bridge {
+    background: var(--cream);
+    padding: 0 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .post-guide-bridge-inner {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--sand);
+  }
+
+  .post-guide-bridge p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+  }
+
+  .post-guide-bridge a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--rose-dark);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--rose-pale);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .post-guide-bridge a:hover {
+    color: var(--rose-deep);
+    border-bottom-color: var(--rose-dark);
+  }
+
+  /* ===== FERTIL FULL BLOCK ===== */
+  .fertil-block {
+    background-color: var(--sand);
+    padding: 4.5rem 1.5rem;
+  }
+
+  .fertil-block-layout {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .fertil-block-photo {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .fertil-block-photo img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  .fertil-block-content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  /* ===== FERTIL (legacy — keeping class for compatibility) ===== */
   .fertil {
     background-color: var(--sand);
     text-align: center;
@@ -660,7 +813,6 @@
   @media (min-width: 768px) {
     section { padding: 6rem 2.5rem; }
 
-    
     .about-layout {
       flex-direction: row;
       align-items: flex-start;
@@ -691,12 +843,16 @@
     .guide-card { padding: 1.1rem; }
     .img-strip { height: 160px; }
     .final-cta-img { height: 180px; }
+    .fertil-block { padding: 3rem 1.5rem; }
+    .fertil-block-photo img { height: 260px; }
   }
 </style>
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-top">
       <div class="hero-content">
@@ -710,9 +866,11 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           <p class="cta-note">Es gratuita · Sin spam · Directo a tu email</p>
-          <p style="margin-top: 0.9rem; font-size: 0.82rem; font-weight: 300; color: var(--text-tertiary);">
-            ¿Ya estás buscando embarazo? <a href="/fertil" style="color: var(--rose-dark); text-decoration: underline; font-weight: 400;">Quiero trabajar mi caso en profundidad →</a>
-          </p>
+          <!-- CAMBIO 1: CTA secundario visible, no link tímido -->
+          <a href="/fertil" class="hero-secondary-cta">
+            <span>¿Querés acompañamiento personalizado? Conocé Fértil</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -723,7 +881,9 @@
     <img src="images/hero-food.JPG" alt="Alimentos saludables para la fertilidad">
   </div>
 
-  <!-- IDENTIFICATION -->
+  <!-- ════════════════════════════════════════
+       IDENTIFICATION
+  ════════════════════════════════════════ -->
   <section class="identification">
     <div class="inner">
       <p class="label rv">Quizás te pasa esto</p>
@@ -737,12 +897,27 @@
     </div>
   </section>
 
+  <!-- ════════════════════════════════════════
+       CAMBIO 2: MINI FÉRTIL BRIDGE (post-identificación)
+  ════════════════════════════════════════ -->
+  <div class="fertil-bridge rv">
+    <div class="fertil-bridge-inner">
+      <p>Si sentís que no necesitás más información suelta sino un plan claro para tu caso, <strong style="font-weight: 500; color: var(--text-primary);">Fértil</strong> es mi acompañamiento 1:1 para trabajar tu fertilidad en profundidad.</p>
+      <a href="/fertil" class="fertil-bridge-link">
+        <span>Conocé Fértil 1:1</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
   <!-- BOTANICAL SEPARATOR -->
   <div class="img-strip rv">
     <img src="images/botanicals.jpg" alt="Hierbas y flores naturales">
   </div>
 
-  <!-- ABOUT -->
+  <!-- ════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════ -->
   <section class="about">
     <div class="inner">
       <div class="about-layout rv">
@@ -758,15 +933,17 @@
     </div>
   </section>
 
-  <!-- FÉRTIL BLOCK -->
-  <section style="background: var(--sand); padding: 2.5rem 1.5rem 3.5rem;">
-    <div style="max-width: 880px; margin: 0 auto; display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;">
+  <!-- ════════════════════════════════════════
+       FÉRTIL FULL BLOCK (bloque completo — cierre)
+  ════════════════════════════════════════ -->
+  <section class="fertil-block">
+    <div class="fertil-block-layout">
       <!-- Photo -->
-      <div class="rv" style="flex: 1; min-width: 280px;">
-        <img src="images/fertil-block.jpg" alt="Acompañamiento nutricional para fertilidad" style="width: 100%; height: 380px; object-fit: cover; border-radius: 14px;">
+      <div class="fertil-block-photo rv">
+        <img src="images/fertil-block.jpg" alt="Acompañamiento nutricional para fertilidad">
       </div>
       <!-- Content -->
-      <div class="rv rv-d1" style="flex: 1; min-width: 300px;">
+      <div class="fertil-block-content rv rv-d1">
         <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.8rem;">Fértil 1:1</p>
         <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 400; line-height: 1.25; color: var(--text-primary); margin-bottom: 1.2rem;">Si la guía te hizo sentido,<br>esto es lo que sigue.</h2>
         <p style="font-size: 0.98rem; font-weight: 300; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.8rem;">
@@ -786,7 +963,9 @@
     </div>
   </section>
 
-  <!-- PARADIGM -->
+  <!-- ════════════════════════════════════════
+       PARADIGM
+  ════════════════════════════════════════ -->
   <section class="paradigm">
     <div class="inner rv">
       <p>La fertilidad no depende solo de tus estudios de rutina. Tu metabolismo, tus niveles de inflamación, tu equilibrio hormonal… todo eso impacta directamente en tu capacidad de concebir.</p>
@@ -798,7 +977,9 @@
     <img src="images/window-flowers.JPG" alt="Luz natural y flores">
   </div>
 
-  <!-- GUIDE -->
+  <!-- ════════════════════════════════════════
+       GUIDE
+  ════════════════════════════════════════ -->
   <section class="guide">
     <div class="inner">
       <p class="label rv">La guía gratuita</p>
@@ -831,16 +1012,19 @@
     </div>
   </section>
 
-  <!-- BRIDGE TO FINAL CTA -->
-  <section style="padding: 2rem 1.5rem; text-align: center; background: var(--sand-light);">
-    <div class="inner rv">
-      <p style="font-family: var(--font-display); font-size: 1.15rem; font-style: italic; color: var(--text-secondary); line-height: 1.7;">
-        Este es el mismo enfoque que aplico en consulta y dentro de <strong style="font-style: normal; color: var(--rose-dark);">Fértil</strong>, mi programa de acompañamiento clínico para mujeres que están buscando embarazo.
-      </p>
+  <!-- ════════════════════════════════════════
+       CAMBIO 3: POST-GUIDE BRIDGE
+  ════════════════════════════════════════ -->
+  <div class="post-guide-bridge rv">
+    <div class="post-guide-bridge-inner">
+      <p>¿Querés que trabajemos esto en tu caso, con seguimiento real?</p>
+      <a href="/fertil">Conocé Fértil 1:1 →</a>
     </div>
-  </section>
+  </div>
 
-  <!-- PRESS / AUTORIDAD -->
+  <!-- ════════════════════════════════════════
+       PRESS / AUTORIDAD
+  ════════════════════════════════════════ -->
   <section class="press">
     <div class="inner">
       <p class="label rv">En medios</p>
@@ -883,7 +1067,9 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- ════════════════════════════════════════
+       FINAL CTA
+  ════════════════════════════════════════ -->
   <section class="final-cta">
     <div class="final-cta-img rv">
       <img src="images/hands-abdomen.JPG" alt="Esperanza y cuidado">
