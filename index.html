@@ -1,1113 +1,123 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JYMQSF17XC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JYMQSF17XC');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Julieta Lupardo — Nutrición y Fertilidad</title>
-<meta name="description" content="Guía gratuita: los 5 parámetros que necesitás revisar antes de buscar embarazo. Por Julieta Lupardo, Lic. en Nutrición especializada en fertilidad y metabolismo hormonal.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --rose: #B8848B;
-    --rose-dark: #96636B;
-    --rose-deep: #7A4D55;
-    --rose-light: #D4ADB3;
-    --rose-pale: #E5D1D4;
-    --sand-light: #FAF5F3;
-    --sand: #F0E8E4;
-    --sand-dark: #E0D3CC;
-    --terracotta: #C4876B;
-    --text-primary: #2E2A25;
-    --text-secondary: #5C554D;
-    --text-tertiary: #8A8279;
-    --cream: #FFFDF8;
-    --font-display: 'DM Serif Display', Georgia, serif;
-    --font-body: 'Outfit', system-ui, sans-serif;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--font-body);
-    color: var(--text-primary);
-    background-color: var(--sand-light);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-
-  /* Grain */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.018;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 200px;
-  }
-
-  /* ===== HERO ===== */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: var(--sand);
-  }
-
-  .hero-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2.5rem 1.5rem 2rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-content {
-    max-width: 720px;
-  }
-
-  .eyebrow {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rose);
-    margin-bottom: 1.2rem;
-    opacity: 0;
-    animation: rise 0.8s ease-out 0.2s forwards;
-  }
-
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5.2vw, 3.4rem);
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    opacity: 0;
-    animation: rise 0.9s ease-out 0.4s forwards;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--rose-dark);
-  }
-
-  .hero-sub {
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    max-width: 540px;
-    margin: 0 auto 1.8rem;
-    line-height: 1.75;
-    opacity: 0;
-    animation: rise 0.9s ease-out 0.6s forwards;
-  }
-
-  .hero-cta-wrap {
-    opacity: 0;
-    animation: rise 0.9s ease-out 0.8s forwards;
-  }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(26px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* CTA */
-  .cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--cream);
-    background: linear-gradient(135deg, var(--rose-deep) 0%, var(--rose-dark) 100%);
-    padding: 1.2rem 3rem;
-    border-radius: 60px;
-    text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 6px 28px rgba(122,77,85,0.3), 0 2px 6px rgba(122,77,85,0.15);
-    position: relative;
-    overflow: hidden;
-    min-height: 56px;
-  }
-
-  .cta::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--rose-deep) 0%, var(--rose-dark) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    border-radius: inherit;
-  }
-
-  .cta:hover::before { opacity: 1; }
-  .cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(150,99,107,0.3);
-  }
-
-  .cta span, .cta svg { position: relative; z-index: 1; }
-  .cta svg { transition: transform 0.3s ease; width: 18px; height: 18px; }
-  .cta:hover svg { transform: translateX(3px); }
-
-  .cta-note {
-    font-size: 0.78rem;
-    font-weight: 300;
-    color: var(--text-tertiary);
-    margin-top: 0.5rem;
-  }
-
-  /* === HERO SECONDARY CTA === */
-  .hero-secondary-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 1.2rem;
-    padding: 0.7rem 1.8rem;
-    font-family: var(--font-body);
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: var(--rose-dark);
-    background: transparent;
-    border: 1.5px solid var(--rose-pale);
-    border-radius: 60px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .hero-secondary-cta:hover {
-    background: var(--rose-pale);
-    color: var(--rose-deep);
-    border-color: var(--rose-light);
-    transform: translateY(-2px);
-  }
-
-  .hero-secondary-cta svg {
-    width: 14px; height: 14px;
-    transition: transform 0.3s ease;
-  }
-
-  .hero-secondary-cta:hover svg {
-    transform: translateX(3px);
-  }
-
-  /* ===== SECTIONS ===== */
-  section { padding: 5rem 1.5rem; }
-
-  .inner { max-width: 660px; margin: 0 auto; }
-
-  .label {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rose);
-    margin-bottom: 0.8rem;
-  }
-
-  .stitle {
-    font-family: var(--font-display);
-    font-size: clamp(1.65rem, 3.8vw, 2.5rem);
-    font-weight: 400;
-    line-height: 1.25;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-  }
-
-  .stitle em { font-style: italic; color: var(--rose-dark); }
-
-  /* Reveal */
-  .rv {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .rv.vis { opacity: 1; transform: translateY(0); }
-  .rv-d1 { transition-delay: 0.1s; }
-  .rv-d2 { transition-delay: 0.2s; }
-  .rv-d3 { transition-delay: 0.3s; }
-  .rv-d4 { transition-delay: 0.4s; }
-
-  /* ===== IMAGE STRIP (separator) ===== */
-  .img-strip {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .img-strip img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  /* ===== IDENTIFICATION ===== */
-  .identification { background-color: var(--cream); padding-top: 3rem; padding-bottom: 1.5rem; }
-
-  .pain-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .pain-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.1rem;
-    padding: 1.3rem 0;
-    border-bottom: 1px solid var(--sand);
-    font-family: var(--font-display);
-    font-size: 1.12rem;
-    font-style: italic;
-    color: var(--text-secondary);
-    line-height: 1.5;
-  }
-
-  .pain-list li:last-child { border-bottom: none; }
-
-  .dot {
-    width: 10px; height: 10px; min-width: 10px;
-    background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
-    border-radius: 50%;
-    margin-top: 0.4rem;
-  }
-
-  /* ===== MINI FÉRTIL BRIDGE ===== */
-  .fertil-bridge {
-    background: var(--cream);
-    padding: 0 1.5rem 3.5rem;
-    text-align: center;
-  }
-
-  .fertil-bridge-inner {
-    max-width: 520px;
-    margin: 0 auto;
-    padding: 1.2rem 2rem;
-    border-top: 1px solid var(--sand);
-  }
-
-  .fertil-bridge p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    line-height: 1.75;
-    margin-bottom: 1.2rem;
-  }
-
-  .fertil-bridge-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--rose-dark);
-    text-decoration: none;
-    padding: 0.6rem 0;
-    border-bottom: 1.5px solid var(--rose-pale);
-    transition: all 0.3s ease;
-  }
-
-  .fertil-bridge-link:hover {
-    color: var(--rose-deep);
-    border-bottom-color: var(--rose-dark);
-  }
-
-  .fertil-bridge-link svg {
-    width: 16px; height: 16px;
-    transition: transform 0.3s ease;
-  }
-
-  .fertil-bridge-link:hover svg {
-    transform: translateX(3px);
-  }
-
-  /* ===== ABOUT ===== */
-  .about {
-    background-color: var(--sand);
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 1.5rem;
-  }
-
-  .about::before {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, var(--rose-pale) 0%, transparent 70%);
-    opacity: 0.2;
-    border-radius: 50%;
-    filter: blur(60px);
-  }
-
-  .about-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
-  }
-
-  .about-photo {
-    position: relative;
-    flex-shrink: 0;
-  }
-
-  .about-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 20%;
-    display: block;
-    box-shadow: 0 10px 36px rgba(150,99,107,0.12), 0 3px 10px rgba(0,0,0,0.04);
-  }
-
-  .about-ring {
-    position: absolute;
-    top: -8px; left: -8px;
-    width: calc(100% + 16px);
-    height: calc(100% + 16px);
-    border-radius: 50%;
-    border: 1px solid var(--rose-light);
-    opacity: 0.5;
-  }
-
-  .about-text p {
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    line-height: 1.85;
-    margin-bottom: 1.2rem;
-  }
-
-  .about-quote {
-    font-family: var(--font-display);
-    font-size: 1.18rem;
-    font-style: italic;
-    color: var(--text-primary);
-    line-height: 1.6;
-    padding-left: 1.5rem;
-    border-left: 2px solid var(--rose);
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  /* ===== PARADIGM ===== */
-  .paradigm {
-    background: linear-gradient(170deg, var(--rose-deep) 0%, #5A3840 100%);
-    color: var(--cream);
-    text-align: center;
-    padding: 4rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .paradigm::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 200px;
-    opacity: 0.04;
-  }
-
-  .paradigm p {
-    font-family: var(--font-display);
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--cream);
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* ===== GUIDE ===== */
-  .guide { background-color: var(--cream); }
-
-  .guide-grid {
-    display: grid;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .guide-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.1rem;
-    padding: 1.4rem 1.5rem;
-    background-color: var(--sand-light);
-    border-radius: 14px;
-    border: 1px solid var(--sand);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .guide-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0;
-    width: 4px; height: 100%;
-    background: linear-gradient(180deg, var(--rose) 0%, var(--rose-dark) 100%);
-    border-radius: 4px 0 0 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .guide-card:hover {
-    transform: translateX(5px);
-    border-color: var(--rose-pale);
-    box-shadow: 0 4px 18px rgba(184,132,139,0.08);
-  }
-
-  .guide-card:hover::before { opacity: 1; }
-
-  .guide-num {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--rose);
-    line-height: 1;
-    min-width: 26px;
-    padding-top: 0.1rem;
-  }
-
-  .guide-card p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    line-height: 1.65;
-  }
-
-  .guide-cta {
-    text-align: center;
-    padding-top: 1rem;
-  }
-
-  /* ===== POST-GUIDE BRIDGE ===== */
-  .post-guide-bridge {
-    background: var(--cream);
-    padding: 0 1.5rem 3rem;
-    text-align: center;
-  }
-
-  .post-guide-bridge-inner {
-    max-width: 500px;
-    margin: 0 auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--sand);
-  }
-
-  .post-guide-bridge p {
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 0.6rem;
-  }
-
-  .post-guide-bridge a {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--rose-dark);
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--rose-pale);
-    padding-bottom: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .post-guide-bridge a:hover {
-    color: var(--rose-deep);
-    border-bottom-color: var(--rose-dark);
-  }
-
-  /* ===== FERTIL FULL BLOCK ===== */
-  .fertil-block {
-    background-color: var(--sand);
-    padding: 4.5rem 1.5rem;
-  }
-
-  .fertil-block-layout {
-    max-width: 880px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .fertil-block-photo {
-    flex: 1;
-    min-width: 280px;
-  }
-
-  .fertil-block-photo img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 14px;
-  }
-
-  .fertil-block-content {
-    flex: 1;
-    min-width: 300px;
-  }
-
-  /* ===== FERTIL (legacy — keeping class for compatibility) ===== */
-  .fertil {
-    background-color: var(--sand);
-    text-align: center;
-    padding: 4.5rem 1.5rem;
-  }
-
-  .fertil-inner { max-width: 540px; margin: 0 auto; }
-
-  .fertil-line {
-    width: 40px; height: 1px;
-    background-color: var(--rose);
-    margin: 0 auto 2rem;
-    opacity: 0.4;
-  }
-
-  .fertil p {
-    font-family: var(--font-display);
-    font-size: 1.15rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    font-style: italic;
-  }
-
-  .fertil strong {
-    font-style: normal;
-    font-weight: 400;
-    color: var(--rose-dark);
-  }
-
-  /* ===== FINAL CTA ===== */
-  .final-cta {
-    text-align: center;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    background: var(--sand);
-  }
-
-  .final-cta-img {
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .final-cta-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  .final-cta-img::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 100px;
-    background: linear-gradient(to top, var(--sand) 0%, transparent 100%);
-  }
-
-  .final-cta-content {
-    padding: 3rem 1.5rem 3rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .final-cta .stitle { margin-bottom: 1rem; }
-
-  .final-cta p {
-    font-size: 1.02rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-  }
-
-  /* ===== PRESS / AUTORIDAD ===== */
-  .press {
-    background: var(--sand-light);
-    text-align: center;
-    padding: 3rem 1.5rem;
-  }
-
-  .press-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-  }
-
-  .press-logo {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--text-tertiary);
-    opacity: 0.55;
-    transition: opacity 0.3s ease;
-  }
-
-  .press-logo:hover { opacity: 0.85; }
-
-  .press-articles {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-
-  .press-article {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.4rem;
-    background: white;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 1px solid var(--sand-dark);
-  }
-
-  .press-article:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  }
-
-  .press-source {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--rose);
-    white-space: nowrap;
-    min-width: 60px;
-  }
-
-  .press-title {
-    font-size: 0.88rem;
-    font-weight: 400;
-    color: var(--text-primary);
-    line-height: 1.45;
-    text-align: left;
-  }
-
-  .press-arrow {
-    margin-left: auto;
-    color: var(--rose-light);
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-
-  /* ===== CONSULTAS (backup) ===== */
-  .consultas-backup {
-    background: var(--sand);
-    text-align: center;
-    padding: 2rem 1.5rem 2.5rem;
-  }
-
-  .consultas-backup p {
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    max-width: 480px;
-    margin: 0 auto 1.8rem;
-    line-height: 1.7;
-  }
-
-  .consultas-btns {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .consulta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: var(--rose-dark);
-    background: transparent;
-    padding: 0.75rem 1.6rem;
-    border-radius: 60px;
-    border: 1.5px solid var(--rose-pale);
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .consulta-btn:hover {
-    background: var(--rose-pale);
-    color: var(--rose-deep);
-    border-color: var(--rose-light);
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background-color: var(--text-primary);
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-  }
-
-  footer p {
-    font-size: 0.78rem;
-    font-weight: 300;
-    color: rgba(255,253,248,0.4);
-  }
-
-  footer a {
-    color: var(--rose-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  footer a:hover { color: var(--cream); }
-
-  .fdot {
-    display: inline-block;
-    width: 3px; height: 3px;
-    background: rgba(255,253,248,0.2);
-    border-radius: 50%;
-    margin: 0 0.6rem;
-    vertical-align: middle;
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (min-width: 768px) {
-    section { padding: 6rem 2.5rem; }
-
-    .about-layout {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 3rem;
-    }
-
-    .about-img { width: 220px; height: 220px; }
-
-    .paradigm { padding: 5rem 2.5rem; }
-
-    .guide-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-    }
-
-    .img-strip { height: 300px; }
-
-    .final-cta-img { height: 320px; }
-  }
-
-  @media (max-width: 480px) {
-    .hero-top { padding: 1.8rem 1.2rem 1.5rem; }
-    .hero h1 { font-size: 1.8rem; margin-bottom: 0.8rem; }
-    .hero-sub { margin-bottom: 1.2rem; font-size: 0.98rem; }
-    .cta { padding: 1.05rem 2.2rem; font-size: 0.95rem; }
-    .about-img { width: 160px; height: 160px; }
-    .pain-list li { font-size: 1.02rem; }
-    .guide-card { padding: 1.1rem; }
-    .img-strip { height: 160px; }
-    .final-cta-img { height: 180px; }
-    .fertil-block { padding: 3rem 1.5rem; }
-    .fertil-block-photo img { height: 260px; }
-  }
-</style>
-</head>
-<body>
-
-  <!-- ════════════════════════════════════════
-       HERO
-  ════════════════════════════════════════ -->
-  <section class="hero">
-    <div class="hero-top">
-      <div class="hero-content">
-        <p class="eyebrow">Nutrición · Fertilidad · Metabolismo Hormonal</p>
-        <h1>Si estás buscando embarazo y no llega, puede que <em>nadie esté mirando lo correcto.</em></h1>
-        <p class="hero-sub">Descargá la guía gratuita donde te explico qué parámetros realmente importan para tu fertilidad — más allá de lo que te dicen como "normal".</p>
-        <div class="hero-cta-wrap">
-          <p style="font-size: 0.78rem; font-weight: 500; color: var(--rose-dark); margin-bottom: 0.6rem; letter-spacing: 0.02em;">📘 Guía gratuita</p>
-          <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
-            <span>Descargar la guía ahora</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <p class="cta-note">Es gratuita · Sin spam · Directo a tu email</p>
-          <!-- Segundo camino: para quien ya está lista -->
-          <div style="margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--sand-dark);">
-            <p style="font-size: 0.85rem; font-weight: 300; color: var(--text-tertiary); margin-bottom: 0.6rem;">Si ya estás buscando embarazo, esto es para vos 💜</p>
-            <a href="/fertil" class="hero-secondary-cta">
-              <span>Conocé Fértil, mi programa 1:1</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-            <p style="font-size: 0.75rem; font-weight: 300; color: var(--text-tertiary); margin-top: 0.4rem;">Acompañamiento personalizado durante 8 semanas</p>
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#45213d">
+    <meta name="description" content="Conocé Fértil, el acompañamiento nutricional 1:1 de Julieta Lupardo: 8 semanas, 5 consultas online y seguimiento cercano para trabajar tu alimentación, tus estudios y tus hábitos.">
+
+    <link rel="canonical" href="https://www.julietalupardo.com/">
+    <title>Julieta Lupardo · Nutrición y fertilidad</title>
+    <link rel="icon" href="./landing-assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./landing-assets/fonts.css">
+    <link rel="stylesheet" href="./landing-assets/styles.css">
+    <script src="./landing-assets/script.js" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYMQSF17XC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYMQSF17XC');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Julieta Lupardo, inicio"><span class="brand-name">Julieta Lupardo<span>.</span></span><span class="brand-caption">NUTRICIÓN Y FERTILIDAD</span></a>
+        <nav class="main-nav" aria-label="Navegación principal"><a href="#fertil">Fértil 1:1</a><a href="#guia">La guía</a><a href="#sobre-mi">Sobre mí</a><a href="#medios">En medios</a></nav>
+        <a class="header-cta" href="https://www.julietalupardo.com/fertil">Conocé Fértil <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <details class="mobile-menu"><summary aria-label="Abrir menú"><span></span><span></span></summary><nav aria-label="Navegación móvil"><a href="#fertil">Fértil 1:1</a><a href="#guia">La guía gratuita</a><a href="#sobre-mi">Sobre mí</a><a href="#medios">En medios</a></nav></details>
+      </div>
+      <div class="reading-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero container" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">FÉRTIL · ACOMPAÑAMIENTO NUTRICIONAL 1:1</p>
+          <h1 id="hero-title">Nutrición para<br>acompañar tu<br><em>fertilidad.</em></h1>
+          <p class="hero-description">Soy Julieta. En Fértil trabajamos sobre tu alimentación, tus estudios y tus hábitos durante 8 semanas, con un plan para tu caso y seguimiento cercano.</p>
+          <div class="hero-actions"><a class="button button-plum" href="https://www.julietalupardo.com/fertil">Quiero conocer Fértil <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><span class="hero-action-note">5 consultas online · 8 semanas · 1:1 cupos limitados</span></div>
+          <a class="hero-guide-link" href="#guia">También podés empezar por la guía gratuita <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="hero-portrait">
+          <img src="./landing-assets/julieta.jpg" alt="Licenciada Julieta Lupardo" width="1024" height="1536" fetchpriority="high">
+          <figcaption><span class="portrait-label">QUIÉN TE ACOMPAÑA</span><strong>Lic. Julieta Lupardo</strong><span>M.N. 6858 · M.P. 3265</span></figcaption>
+          <a class="portrait-about" href="#sobre-mi" aria-label="Conocé más sobre Julieta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        </figure>
+      </section>
+
+      <div class="press-strip container" aria-label="Julieta en medios"><span>COMPARTO MI MIRADA EN</span><div class="press-wordmarks"><a href="#medios" class="logo-infobae">infobae</a><a href="#medios" class="logo-clarin">Clarín</a><a href="#medios" class="logo-parati">Para Ti</a></div><a class="press-strip-link" href="#medios">Leer las notas <span aria-hidden="true">↗</span></a></div>
+
+      <section class="section container understanding" id="tu-busqueda" aria-labelledby="understanding-title">
+        <figure class="understanding-image"><img src="./landing-assets/tu-historia.webp" alt="Una mujer escribe en su cuaderno junto a una ventana" width="1920" height="1080" loading="lazy"><figcaption>TU HISTORIA ES EL PUNTO DE PARTIDA</figcaption></figure>
+        <div class="understanding-copy">
+          <p class="eyebrow"><span class="section-number">01</span> TU BÚSQUEDA, TU HISTORIA</p>
+          <h2 id="understanding-title">Entre tantos consejos,<br><em>necesitás claridad.</em></h2>
+          <p class="section-lead">Quizás alguna de estas situaciones te resulta conocida.</p>
+          <ul class="experience-list">
+            <li><span aria-hidden="true">01</span><p>Tus estudios dicen “normal”, pero el embarazo no llega y seguís con preguntas.</p></li>
+            <li><span aria-hidden="true">02</span><p>Te dijeron que “te relajes”, mientras vos sentís que el tiempo sigue pasando.</p></li>
+            <li><span aria-hidden="true">03</span><p>Estás haciendo cambios, pero no sabés cuáles tienen sentido para tu caso.</p></li>
+            <li><span aria-hidden="true">04</span><p>Buscaste información por todos lados y encontraste recomendaciones distintas.</p></li>
+          </ul>
+          <p class="understanding-close">Podemos poner esa información en contexto y ordenar los próximos pasos desde la nutrición.</p>
+        </div>
+      </section>
+
+      <section class="fertil-section" id="fertil" aria-labelledby="fertil-title">
+        <div class="container fertil-layout">
+          <div class="fertil-copy">
+            <p class="eyebrow">ACOMPAÑAMIENTO NUTRICIONAL 1:1 · 8 SEMANAS</p>
+            <h2 id="fertil-title">Fértil<span>.</span></h2>
+            <p class="fertil-tagline">Un plan para tu caso.<br><em>Un espacio para acompañarte.</em></p>
+            <p class="fertil-description">Trabajamos sobre tu historia, tus análisis y tu alimentación, con tiempo para hacer cambios, revisar cómo te sentís y ajustar lo que necesitás.</p>
+            <ul class="fertil-inclusions"><li>5 consultas online</li><li>Seguimiento por WhatsApp</li><li>Plan, recetas y lista de compras</li><li>Interpretación de tus análisis</li></ul>
+            <a class="button button-cream" href="https://www.julietalupardo.com/fertil">Conocer todo lo que incluye <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            <p class="fertil-availability">1:1 cupos limitados · Modalidad online</p>
           </div>
+          <figure class="fertil-image"><img src="./landing-assets/tu-busqueda.webp" alt="Manos apoyadas sobre el abdomen, sobre un suéter de lana claro" width="1247" height="753" loading="lazy"><figcaption><span>8</span><div><strong>semanas de acompañamiento</strong><span>Para trabajar tu caso y seguir cada paso.</span></div></figcaption></figure>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- HERO IMAGE -->
-  <div class="img-strip">
-    <img src="images/hero-food.JPG" alt="Alimentos saludables para la fertilidad">
-  </div>
-
-  <!-- ════════════════════════════════════════
-       IDENTIFICATION
-  ════════════════════════════════════════ -->
-  <section class="identification">
-    <div class="inner">
-      <p class="label rv">Quizás te pasa esto</p>
-      <h2 class="stitle rv rv-d1">¿Te sentís <em>identificada</em>?</h2>
-      <ul class="pain-list">
-        <li class="rv rv-d1"><div class="dot"></div>Tus estudios dicen "normal", pero el embarazo no llega</li>
-        <li class="rv rv-d2"><div class="dot"></div>Te dijeron que "te relajes"… pero el tiempo sigue pasando</li>
-        <li class="rv rv-d3"><div class="dot"></div>Sentís que estás haciendo todo bien y no entendés qué falta</li>
-        <li class="rv rv-d4"><div class="dot"></div>Buscaste información por todos lados y cada cosa dice algo distinto</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       FÉRTIL BLOCK (post-identificación — momento caliente)
-  ════════════════════════════════════════ -->
-  <section class="fertil-block">
-    <div class="fertil-block-layout">
-      <!-- Photo -->
-      <div class="fertil-block-photo rv">
-        <img src="images/fertil-block.jpg" alt="Acompañamiento nutricional para fertilidad">
-      </div>
-      <!-- Content -->
-      <div class="fertil-block-content rv rv-d1">
-        <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.8rem;">Fértil 1:1</p>
-        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 400; line-height: 1.25; color: var(--text-primary); margin-bottom: 1.2rem;">Si te sentiste identificada,<br>esto es para vos.</h2>
-        <p style="font-size: 0.98rem; font-weight: 300; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.8rem;">
-          <strong style="font-weight: 500; color: var(--text-primary);">Fértil</strong> es un acompañamiento 1:1 donde trabajamos tu caso, tus análisis y tu alimentación con un plan claro y seguimiento real durante 8 semanas.
-        </p>
-        <p style="font-size: 0.92rem; font-weight: 300; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.8rem;">
-          No es una consulta aislada. Es un proceso pensado para generar cambios concretos en tu fertilidad.
-        </p>
-        <p style="font-size: 0.9rem; font-weight: 400; color: var(--text-tertiary); line-height: 1.75; margin-bottom: 2rem; font-style: italic;">
-          Si sentís que estás probando cosas sueltas y no sabés por dónde empezar, esto es para vos.
-        </p>
-        <a href="/fertil" class="cta">
-          <span>Quiero empezar con Fértil</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BOTANICAL SEPARATOR -->
-  <div class="img-strip rv">
-    <img src="images/botanicals.jpg" alt="Hierbas y flores naturales">
-  </div>
-
-  <!-- ════════════════════════════════════════
-       ABOUT
-  ════════════════════════════════════════ -->
-  <section class="about">
-    <div class="inner">
-      <div class="about-layout rv">
-        <div class="about-photo">
-          <img src="images/julieta.jpg" alt="Julieta Lupardo — Licenciada en Nutrición" class="about-img">
-          <div class="about-ring"></div>
+      <section class="section container guide-section" id="guia" aria-labelledby="guide-title">
+        <div class="guide-intro">
+          <p class="eyebrow"><span class="section-number">02</span> LA GUÍA GRATUITA</p>
+          <h2 id="guide-title">Un primer paso,<br><em>a tu ritmo.</em></h2>
+          <p class="section-lead">Los 5 parámetros que necesitás revisar antes de buscar embarazo.</p>
+          <p>Preparé esta guía para ayudarte a entender qué mirar en tus análisis y qué preguntas llevar a tu consulta.</p>
+          <a class="button button-plum" href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" rel="noopener noreferrer">Quiero recibir la guía <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-4-4 4 4 4-4M5 17v3h14v-3"/></svg></a>
+          <p class="guide-delivery">Gratuita · La recibís por email</p>
         </div>
-        <div class="about-text">
-          <p>Soy Julieta Lupardo, licenciada en nutrición especializada en fertilidad y metabolismo hormonal. Trabajo con mujeres que están buscando embarazo desde un enfoque diferente: entender qué está pasando realmente en tu cuerpo antes de buscar soluciones genéricas.</p>
-          <p class="about-quote">Porque muchas veces el problema no es la falta de información — es que nadie está mirando lo que realmente importa.</p>
+        <div class="guide-topics"><p class="guide-topics-label">QUÉ VAS A ENCONTRAR</p><ol><li><span>01</span><div><h3>Qué estudios mirar</h3><p>Parámetros para conversar en consulta antes de buscar embarazo, además de los estudios de rutina.</p></div></li><li><span>02</span><div><h3>Cómo leer tus resultados</h3><p>Una mirada sobre esos valores que te dijeron que eran “normales”.</p></div></li><li><span>03</span><div><h3>El lugar de los nutrientes</h3><p>Información sobre nutrición y su relación con la fertilidad.</p></div></li><li><span>04</span><div><h3>Qué hábitos revisar</h3><p>Errores frecuentes y aspectos para poner en contexto antes de seguir sumando cambios.</p></div></li></ol></div>
+        <div class="guide-followup"><p>Si después de leerla necesitás un plan personal, podemos trabajar tu caso en Fértil.</p><a class="text-link" href="https://www.julietalupardo.com/fertil">Conocé el acompañamiento <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section class="about-section" id="sobre-mi" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div><p class="eyebrow"><span class="section-number">03</span> SOY JULIETA LUPARDO</p><h2 id="about-title">La nutrición,<br>con tiempo para<br><em>escucharte.</em></h2><div class="about-credentials"><strong>Lic. en Nutrición</strong><span>M.N. 6858 · M.P. 3265</span></div></div>
+          <div class="about-copy"><p class="section-lead">Me especializo en fertilidad y metabolismo hormonal. Acompaño a mujeres que están buscando embarazo o se están preparando para hacerlo.</p><p>Me interesa entender tu historia antes de pensar un plan: cómo te alimentás, qué muestran tus estudios, cómo son tus hábitos y qué preguntas necesitás resolver.</p><p>La alimentación, el metabolismo y la salud hormonal forman parte de esa mirada. En consulta los ponemos en contexto, junto con tu situación y la atención de tu equipo médico.</p><p>Quiero que tengas información clara y un plan que puedas llevar a tu vida cotidiana.</p><a class="text-link" href="https://www.instagram.com/julilupardo/" target="_blank" rel="noopener noreferrer">Encontrame en @julilupardo <span aria-hidden="true">↗</span></a></div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ════════════════════════════════════════
-       PARADIGM
-  ════════════════════════════════════════ -->
-  <section class="paradigm">
-    <div class="inner rv">
-      <p>La fertilidad no depende solo de tus estudios de rutina. Tu metabolismo, tus niveles de inflamación, tu equilibrio hormonal… todo eso impacta directamente en tu capacidad de concebir.</p>
-    </div>
-  </section>
-
-  <!-- WINDOW SEPARATOR -->
-  <div class="img-strip rv">
-    <img src="images/window-flowers.JPG" alt="Luz natural y flores">
-  </div>
-
-  <!-- ════════════════════════════════════════
-       GUIDE
-  ════════════════════════════════════════ -->
-  <section class="guide">
-    <div class="inner">
-      <p class="label rv">La guía gratuita</p>
-      <h2 class="stitle rv rv-d1">¿Qué vas a encontrar <em>en la guía</em>?</h2>
-      <div class="guide-grid">
-        <div class="guide-card rv rv-d1">
-          <span class="guide-num">1</span>
-          <p>Qué estudios pedir antes de buscar embarazo — más allá de los de rutina</p>
+      <section class="section container media-section" id="medios" aria-labelledby="media-title">
+        <div class="section-heading"><div><p class="eyebrow"><span class="section-number">04</span> EN MEDIOS</p><h2 id="media-title">La conversación<br><em>también sigue acá.</em></h2></div><p>Notas en las que comparto mi mirada sobre nutrición, fertilidad y cuidado.</p></div>
+        <div class="media-list">
+          <a class="media-item" href="https://www.infobae.com/salud/2022/06/24/la-inflamacion-la-culpable-de-todos-los-males-cual-es-su-relacion-con-la-infertilidad/" target="_blank" rel="noopener noreferrer"><span class="media-publisher logo-infobae">infobae</span><h3>La inflamación y su relación con la infertilidad</h3><span class="media-read">Leer nota <span aria-hidden="true">↗</span></span></a>
+          <a class="media-item" href="https://www.infobae.com/salud/2022/08/31/diez-alimentos-que-no-pueden-faltar-durante-el-embarazo/" target="_blank" rel="noopener noreferrer"><span class="media-publisher logo-infobae">infobae</span><h3>10 alimentos que no pueden faltar durante el embarazo</h3><span class="media-read">Leer nota <span aria-hidden="true">↗</span></span></a>
+          <a class="media-item" href="https://www.clarin.com/buena-vida/alimentacion-antiinflamatoria-5-consejos-incorporarla_0_d8d3Dm9S2w.html" target="_blank" rel="noopener noreferrer"><span class="media-publisher logo-clarin">Clarín</span><h3>Alimentación antiinflamatoria: 5 consejos para tu día a día</h3><span class="media-read">Leer nota <span aria-hidden="true">↗</span></span></a>
+          <a class="media-item" href="https://www.clarin.com/entremujeres/hogar-y-familia/habitos-alimentos-terapias-ayudan-mejorar-fertilidad_0_-7mFNNerC.html" target="_blank" rel="noopener noreferrer"><span class="media-publisher logo-clarin">Clarín</span><h3>Hábitos, alimentos y terapias que ayudan a mejorar la fertilidad</h3><span class="media-read">Leer nota <span aria-hidden="true">↗</span></span></a>
+          <a class="media-item" href="https://www.parati.com.ar/lifestyle/semana-mundial-de-la-lactancia-materna-como-deberia-alimentarse-la-mama-para-nutrir-a-su-bebe/" target="_blank" rel="noopener noreferrer"><span class="media-publisher logo-parati">Para Ti</span><h3>Lactancia materna: cómo debería alimentarse la mamá</h3><span class="media-read">Leer nota <span aria-hidden="true">↗</span></span></a>
         </div>
-        <div class="guide-card rv rv-d2">
-          <span class="guide-num">2</span>
-          <p>Cómo interpretar resultados que te dijeron que eran "normales"</p>
-        </div>
-        <div class="guide-card rv rv-d3">
-          <span class="guide-num">3</span>
-          <p>Qué nutrientes impactan directamente en tu fertilidad</p>
-        </div>
-        <div class="guide-card rv rv-d4">
-          <span class="guide-num">4</span>
-          <p>Los errores más comunes que pueden estar frenándote sin que lo sepas</p>
-        </div>
-      </div>
-      <div class="guide-cta rv">
-        <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" class="cta">
-          <span>Descargá la guía gratuita</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <p class="cta-note">Empezá a entender qué puede estar pasando en tu cuerpo.</p>
-      </div>
-    </div>
-  </section>
+        <a class="text-link all-media" href="https://subscribepage.io/medios-julieta" target="_blank" rel="noopener noreferrer">Ver todas las notas <span aria-hidden="true">↗</span></a>
+      </section>
 
-  <!-- ════════════════════════════════════════
-       CAMBIO 3: POST-GUIDE BRIDGE
-  ════════════════════════════════════════ -->
-  <div class="post-guide-bridge rv">
-    <div class="post-guide-bridge-inner">
-      <p>Si después de leer esto sentís que necesitás un plan, podés trabajar tu caso conmigo en Fértil.</p>
-      <a href="/fertil">Conocé Fértil 1:1 →</a>
-    </div>
-  </div>
+      <section class="contact-section contact-focused" id="contacto" aria-labelledby="contact-title">
+        <div class="container"><div class="contact-heading"><p class="eyebrow">FÉRTIL · UN ACOMPAÑAMIENTO PARA VOS</p><h2 id="contact-title">Tu búsqueda,<br><em>acompañada de cerca.</em></h2><p class="contact-description">Conocé cómo podemos trabajar tu caso durante 8 semanas, con consultas, un plan personalizado y seguimiento entre encuentros.</p><a class="button button-cream" href="https://www.julietalupardo.com/fertil">Quiero conocer Fértil <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><p class="contact-availability">1:1 cupos limitados · Modalidad online</p><a class="contact-instagram" href="https://ig.me/m/julilupardo" target="_blank" rel="noopener noreferrer">Escribime por Instagram <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+    </main>
 
-  <!-- ════════════════════════════════════════
-       PRESS / AUTORIDAD
-  ════════════════════════════════════════ -->
-  <section class="press">
-    <div class="inner">
-      <p class="label rv">En medios</p>
-      <h2 class="stitle rv rv-d1">Hablando de nutrición y fertilidad en</h2>
-      <div class="press-logos rv rv-d1">
-        <span class="press-logo">Infobae</span>
-        <span class="press-logo">Clarín</span>
-        <span class="press-logo">Para Ti</span>
-      </div>
-      <div class="press-articles">
-        <a href="https://www.infobae.com/salud/2022/06/24/la-inflamacion-la-culpable-de-todos-los-males-cual-es-su-relacion-con-la-infertilidad/" target="_blank" rel="noopener" class="press-article rv rv-d1">
-          <span class="press-source">Infobae</span>
-          <span class="press-title">La inflamación y su relación con la infertilidad</span>
-          <span class="press-arrow">→</span>
-        </a>
-        <a href="https://www.infobae.com/salud/2022/08/31/diez-alimentos-que-no-pueden-faltar-durante-el-embarazo/" target="_blank" rel="noopener" class="press-article rv rv-d2">
-          <span class="press-source">Infobae</span>
-          <span class="press-title">10 alimentos que no pueden faltar durante el embarazo</span>
-          <span class="press-arrow">→</span>
-        </a>
-        <a href="https://www.clarin.com/buena-vida/alimentacion-antiinflamatoria-5-consejos-incorporarla_0_d8d3Dm9S2w.html" target="_blank" rel="noopener" class="press-article rv rv-d1">
-          <span class="press-source">Clarín</span>
-          <span class="press-title">Alimentación antiinflamatoria: 5 consejos para tu día a día</span>
-          <span class="press-arrow">→</span>
-        </a>
-        <a href="https://www.clarin.com/entremujeres/hogar-y-familia/habitos-alimentos-terapias-ayudan-mejorar-fertilidad_0_-7mFNNerC.html" target="_blank" rel="noopener" class="press-article rv rv-d2">
-          <span class="press-source">Clarín</span>
-          <span class="press-title">Hábitos, alimentos y terapias que ayudan a mejorar la fertilidad</span>
-          <span class="press-arrow">→</span>
-        </a>
-        <a href="https://www.parati.com.ar/lifestyle/semana-mundial-de-la-lactancia-materna-como-deberia-alimentarse-la-mama-para-nutrir-a-su-bebe/" target="_blank" rel="noopener" class="press-article rv rv-d1">
-          <span class="press-source">Para Ti</span>
-          <span class="press-title">Lactancia materna: cómo debería alimentarse la mamá</span>
-          <span class="press-arrow">→</span>
-        </a>
-      </div>
-      <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-tertiary);" class="rv">
-        <a href="https://subscribepage.io/medios-julieta" target="_blank" rel="noopener" style="color: var(--rose); text-decoration: underline; font-weight: 400;">Ver todas las notas →</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       FINAL CTA — FÉRTIL (cierre de la home)
-  ════════════════════════════════════════ -->
-  <section class="final-cta">
-    <div class="final-cta-img rv">
-      <img src="images/hands-abdomen.JPG" alt="Esperanza y cuidado">
-    </div>
-    <div class="final-cta-content">
-      <div class="inner rv">
-        <h2 class="stitle">Si sentís que es <em>tu momento,</em> escribime.</h2>
-        <p>Contame tu situación por mensaje directo y vemos juntas si Fértil es para vos.</p>
-        <a href="/fertil" class="cta">
-          <span>Quiero conocer Fértil</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <div style="margin-top: 1.6rem;">
-          <a href="https://subscribepage.io/guia-fertilidad-julieta" target="_blank" style="font-size: 0.85rem; font-weight: 400; color: var(--text-tertiary); text-decoration: none; border-bottom: 1px solid var(--sand-dark); padding-bottom: 2px; transition: all 0.3s ease;">
-            ¿Todavía no estás lista? Descargá la guía gratuita →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONSULTAS (backup — último recurso) -->
-  <section class="consultas-backup">
-    <div class="inner rv">
-      <p>Si sentís que todavía no es el momento para un proceso completo, podés empezar con una consulta individual.</p>
-      <div class="consultas-btns">
-        <a href="https://patient.consultoriomovil.net/patient/web/olivosmedical/31790/lupardo-julieta?utm_source=julietalupardo.com&utm_medium=web&utm_campaign=consulta_presencial" target="_blank" rel="noopener" class="consulta-btn">
-          📍 Consulta presencial
-        </a>
-        <a href="https://instagram.com/julilupardo" target="_blank" rel="noopener" class="consulta-btn">
-          💬 Consulta online
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Julieta Lupardo <span class="fdot"></span> Licenciada en Nutrición <span class="fdot"></span> <a href="https://instagram.com/julilupardo" target="_blank" rel="noopener">@julilupardo</a></p>
-  </footer>
-
-  <script>
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-  </script>
-
-</body>
+    <footer class="site-footer"><div class="container footer-wordmark" aria-hidden="true">Julieta Lupardo<span>.</span></div><div class="container footer-consultations" id="consultas"><span>Consultas individuales</span><div><a href="https://instagram.com/julilupardo" target="_blank" rel="noopener noreferrer">Online <span aria-hidden="true">↗</span></a><a href="https://instagram.com/julilupardo" target="_blank" rel="noopener noreferrer">Presencial <span aria-hidden="true">↗</span></a></div></div><div class="container footer-bottom"><p>© 2026 Julieta Lupardo<br>Lic. en Nutrición · M.N. 6858 · M.P. 3265</p><a href="https://www.instagram.com/julilupardo/" target="_blank" rel="noopener noreferrer">@julilupardo <span aria-hidden="true">↗</span></a><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></div></footer>
+  </body>
 </html>
